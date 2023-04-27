@@ -1,3 +1,13 @@
+const generateSeries = function(start, upto) {
+  const series = [];
+
+  for(let currentNumber = start; currentNumber <= upto; currentNumber++) {
+    series.push(currentNumber);
+  }
+
+  return series;
+};
+
 const isMultiple = function(factors, potentialMultiple) {
   const isAllDivisible = factors.every(function(factor) {
     return (potentialMultiple) % factor === 0;
@@ -15,18 +25,6 @@ const lcm = function(numbers) {
   }
 
   return potentialLcm;
-};
-
-const generateEvenSet = function(start, upto) {
-  const evens = [];
-
-  for(let potentialEven = start; potentialEven <= upto; potentialEven++) {
-    if(potentialEven % 2 === 0) {
-      evens.push(potentialEven);
-    }
-  }
-
-  return evens;
 };
 
 const main = function() {
