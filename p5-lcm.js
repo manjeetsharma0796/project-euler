@@ -28,8 +28,8 @@ const lcm = function(numbers) {
 };
 
 const main = function() {
-  const evens = generateEvenSet(1, 20);
-  return lcm(evens);
+  const series = generateSeries(1, 20);
+  return lcm(series);
 };
 
 main();
