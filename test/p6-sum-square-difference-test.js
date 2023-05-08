@@ -15,5 +15,9 @@ describe('sumOfNumber', function() {
     it('Should give square of sum of first two natural numbers', function() {
       strictEqual(squareOfSum(2), 9);
     });
+
+    it('Should give square of sum of first three natural numbers', function() {
+      strictEqual(squareOfSum(3), 36);
+    });
   });
 });
