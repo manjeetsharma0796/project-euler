@@ -1,6 +1,6 @@
 const {describe,it} = require('node:test');
 const {strictEqual} = require('assert');
-const {sumOfNumber,squareOfSum} = require('../src/p6-sum-square-difference.js');
+const {sumOfNumber,squareOfSum, sumOfSquare} = require('../src/p6-sum-square-difference.js');
 
 describe('sumOfNumber', function() {
   it('Should give sum of first 2 natural number', function() {
@@ -18,6 +18,11 @@ describe('sumOfNumber', function() {
 
     it('Should give square of sum of first three natural numbers', function() {
       strictEqual(squareOfSum(3), 36);
+    });
+  });
+  describe('sumOfSquare', function() {
+    it('Should give square of sum of first two natural numbers', function() {
+      strictEqual(sumOfSquare(2), 5);
     });
   });
 });
