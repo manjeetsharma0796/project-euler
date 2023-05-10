@@ -1,6 +1,6 @@
 const {describe,it} = require('node:test');
 const {strictEqual} = require('assert');
-const {getPotentialPrimeOf, isPrime} = require('../src/p7-nth-prime.js');
+const {getPotentialPrimeOf, isPrime, getPrime} = require('../src/p7-nth-prime.js');
 
 describe('getPotentialPrimeOf', function() {
   it('should give 2 as first prime candidate', function(){
@@ -38,4 +38,19 @@ describe('isPrime', function() {
   });
 });
 
-describe('')
+describe('getPrime', function() {
+  it('should give 2 as first confirmed prime', function() {
+    strictEqual(getPrime(1), 2)
+  })
+  it('should give 3 as second confirmed prime', function() {
+    strictEqual(getPrime(2), 3)
+  })
+  it('should give 3 as second confirmed prime', function() {
+    strictEqual(getPrime(2), 3)
+  })
+  it('should give 11 as fifth confirmed prime', function() {
+    strictEqual(getPrime(10), 29)
+  })
+})
+
+// 2 3 5 7 11 13 17 19 23 25

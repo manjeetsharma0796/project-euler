@@ -33,5 +33,21 @@ const isPrime = function(possiblePrime) {
   return true;
 };
 
+const getPrime = function(nth) {
+  let currentTerm = 1;
+  let primeCount = 0;
+  while(primeCount <= nth) {
+    const potentialPrime = getPotentialPrimeOf(currentTerm);
+    if(isPrime(potentialPrime)) {
+      primeCount += 1;
+      if(primeCount === nth) {
+        return potentialPrime;
+      }
+    } 
+    currentTerm += 1;
+  }
+}
+
 exports.getPotentialPrimeOf = getPotentialPrimeOf;
 exports.isPrime = isPrime;
+exports.getPrime = getPrime;
