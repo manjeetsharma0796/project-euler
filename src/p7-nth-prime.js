@@ -1,4 +1,4 @@
-const getNthPrimeCandidate = function(nthCandidate) {
+const getPotentialPrimeOf = function(nthCandidate) {
   if(nthCandidate === 1) {
     return 2;
   }
@@ -33,5 +33,5 @@ const isPrime = function(possiblePrime) {
   return true;
 };
 
-exports.getNthPrimeCandidate = getNthPrimeCandidate;
+exports.getPotentialPrimeOf = getPotentialPrimeOf;
 exports.isPrime = isPrime;
