@@ -1,17 +1,19 @@
-const getNthPrimeCandidate = function(number) {
-  if(number === 1) {
+const getNthPrimeCandidate = function(nthCandidate) {
+  if(nthCandidate === 1) {
     return 2;
   }
 
-  if(number === 2) {
+  if(nthCandidate === 2) {
     return 3;
   }
-
-  if(number === 3) {
+  
+  if(nthCandidate === 3) {
     return 5;
   }
 
+  let number = nthCandidate - 3;
   let n = Math.floor(number / 2) + 1;
+  
   const signs = [-1, 1];
 
   return 6 * n + signs[number % 2];
